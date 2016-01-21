@@ -1,0 +1,30 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "https://dribbble.com/shots/1689980-Inventory-Animation/attachments/268344",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-watch": "^4.3.5",
+    "gulp-stylus": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selenka/dashboard-js.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Elena Kotets, Alya Surikova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selenka/dashboard-js/issues"
+  },
+  "homepage": "https://github.com/selenka/dashboard-js#readme"
+}
