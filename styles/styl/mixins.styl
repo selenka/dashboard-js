@@ -1,0 +1,26 @@
+clearfix()
+  *zoom 1
+
+  &:after
+	content ''
+	display table
+	clear both
+
+prefix(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -ms-{prop} args
+  -o-{prop} args
+  {prop} args
+
+linear-gradient()
+  prefix('linear-gradient', arguments)
+
+transition()
+  prefix('transition', arguments)
+
+transform()
+  prefix('transform', arguments)
+
+user-select()
+  prefix('user-select', arguments)

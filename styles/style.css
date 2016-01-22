@@ -147,8 +147,86 @@
 .icon-dropbox:before {
   content: "\e91e";
 }
+.chart {
+  height: 450px;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+i {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 body {
-  background: h-bg;
+  background: #1c1f28;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+input[type=password]::-ms-reveal {
+  display: none;
+}
+
+input[type='submit'],
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+::-webkit-input-placeholder {
+  color: #000;
+}
+
+::-moz-placeholder {
+  color: #000 ;
+}
+
+:-ms-input-placeholder {
+  color: #000 ;
+}
+
+input:-moz-placeholder {
+  color: #000;
+}
+
+textarea:focus::-webkit-input-placeholder,
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.select-black {
+  border: 2px solid #94949e;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.select-black:hover {
+  color: #39b5ce;
+  border-color: #39b5ce;
 }
 html,
 body,
