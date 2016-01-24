@@ -16,12 +16,23 @@
 		<div class="page-content">
 			<div class="chart">
 				<div class="chart__tools">
-					<select class="select-black" name="" id="mainChartDateRange">
-						<option value="">today value</option>
-						<option value="">yesterday value</option>
-						<option value="">last week value</option>
-						<option value="">last month value</option>
-					</select>
+					<div class="chart__item  select-box">
+						<select class="select-black" name="" id="mainChartDateRange">
+							<option value="">today value</option>
+							<option value="">yesterday value</option>
+							<option value="">last week value</option>
+							<option value="">last month value</option>
+						</select>
+					</div>
+					<div class="chart__item chart__market">
+						<div class="chart__market-title">today's market value</div>
+						<span class="chart__market-value">$31333</span>
+						<span class="chart__market-index">&#8593; 32</span>
+					</div>
+					<div class="chart__item">
+						<button type="button" class="button-refresh icon-spinner11"></button>
+						<button type="button" class="button dark">all stat</button>
+					</div>
 				</div>
 			</div>
 		</div>

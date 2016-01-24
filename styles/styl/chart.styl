@@ -1,2 +1,60 @@
 .chart
 	height 450px
+
+	&__tools
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		padding 50px 100px
+
+	&__item
+		align-self center
+		padding 0 20px
+		text-align center
+		&.select-box
+			&:after
+				right 24px
+
+	&__market
+		color $white
+
+	&__market-title
+		letter-spacing 1px
+		text-transform uppercase
+		color $gray
+		font-size 10px
+		padding 10px 0 10px 0
+
+	&__market-value
+		font-size 38px
+		font-family $font-roboto
+
+	&__market-index
+		font-size 16px
+		line-height 40px
+		display inline-block
+		vertical-align: top;
+		font-family $font-roboto
+		color $green
+
+@media only screen and (max-width 1024px)
+	.chart
+		&__tools
+			padding 50px
+
+@media only screen and (max-width 500px)
+	.chart
+		&__item
+			flex-direction column
+			width 100%
+
+			select
+				width 100%
+			.button
+				width 80%
+			&.select-box
+				order 1
+				margin-top 15px
+
+		&__tools
+			padding 20px

@@ -1,6 +1,66 @@
 .chart {
   height: 450px;
 }
+.chart__tools {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 100px;
+}
+.chart__item {
+  align-self: center;
+  padding: 0 20px;
+  text-align: center;
+}
+.chart__item.select-box:after {
+  right: 24px;
+}
+.chart__market {
+  color: #fff;
+}
+.chart__market-title {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #94949e;
+  font-size: 10px;
+  padding: 10px 0 10px 0;
+}
+.chart__market-value {
+  font-size: 38px;
+  font-family: 'Roboto Condensed';
+}
+.chart__market-index {
+  font-size: 16px;
+  line-height: 40px;
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Roboto Condensed';
+  color: #adbd6e;
+}
+@media only screen and (max-width: 1024px) {
+  .chart__tools {
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .chart__item {
+    flex-direction: column;
+    width: 100%;
+  }
+  .chart__item select {
+    width: 100%;
+  }
+  .chart__item .button {
+    width: 80%;
+  }
+  .chart__item.select-box {
+    order: 1;
+    margin-top: 15px;
+  }
+  .chart__tools {
+    padding: 20px;
+  }
+}
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -14,6 +74,7 @@ a {
 }
 body {
   background: #1c1f28;
+  font-family: 'Open Sans' !important;
 }
 input,
 button,
@@ -22,6 +83,9 @@ select {
   outline: none;
   border: none;
   cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
 }
 input[type=text]::-ms-clear {
   display: none;
@@ -51,16 +115,70 @@ textarea:focus::-webkit-input-placeholder,
 textarea:focus:-moz-placeholder {
   color: transparent;
 }
-.select-black {
+.select-box select {
   border: 2px solid #94949e;
-  border-radius: 20px;
-  padding: 10px 20px;
+  border-radius: 25px;
+  padding: 10px 25px;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+}
+.select-box select.select-black {
+  color: #fff;
+}
+.select-box:hover .select-black {
+  color: #39b5ce;
+  border-color: #39b5ce;
+}
+.select-box:hover:after {
+  color: #39b5ce;
+}
+.select-box {
+  position: relative;
+}
+.select-box:after {
+  display: block;
+  cursor: pointer;
+  font-family: 'customfont';
+  content: "\e91d";
+  position: absolute;
+  font-size: 22px;
+  color: #fff;
+  right: 4px;
+  top: 5px;
+  z-index: -1;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.button {
+  border: 2px solid #94949e;
+  border-radius: 25px;
+  padding: 10px 25px;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+}
+.button.dark {
+  color: #fff;
+}
+.button:hover {
+  color: #39b5ce;
+  border-color: #39b5ce;
+}
+.button-refresh {
+  border: 2px solid #94949e;
+  border-radius: 50%;
+  padding: 9px;
+  font-size: 14px;
   background: transparent;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
-.select-black:hover {
+.button-refresh:hover {
   color: #39b5ce;
   border-color: #39b5ce;
 }

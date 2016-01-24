@@ -1,4 +1,5 @@
 @import "variables.styl"
+@import "mixins.styl"
 @import "header.styl"
 @import "chart.styl"
 
@@ -15,11 +16,15 @@ a
 
 body
   background $dark-blue
+  font-family $font-base !important
 
 input, button, textarea, select
   outline none
   border none
   cursor pointer
+
+select::-ms-expand
+  display none
 
 input[type=text]::-ms-clear
   display none
@@ -48,10 +53,61 @@ textarea:focus:-moz-placeholder
 // default styles end
 
 // select styles
-.select-black
+.select-box
+  select
+    border 2px solid $gray
+    border-radius 25px
+    padding 10px 25px
+    background transparent
+    text-align center
+    text-transform uppercase
+    &.select-black
+      color $white
+
+  &:hover
+    .select-black
+      color $blue
+      border-color $blue
+    &:after
+      color $blue
+
+
+.select-box
+  position relative
+  &:after
+    display block
+    cursor pointer
+    font-family 'customfont'
+    content "\e91d"
+    position absolute
+    font-size 22px
+    color $white
+    right 4px
+    top 5px
+    z-index -1
+    transform(rotate(180deg))
+
+// buttons styles
+.button
   border 2px solid $gray
-  border-radius 20px
-  padding 10px 20px
+  border-radius 25px
+  padding 10px 25px
+  background transparent
+  text-align center
+  text-transform uppercase
+
+  &.dark
+    color $white
+
+  &:hover
+      color $blue
+      border-color $blue
+
+.button-refresh
+  border 2px solid $gray
+  border-radius 50%
+  padding 9px
+  font-size 14px
   background transparent
   text-align center
   text-transform uppercase
