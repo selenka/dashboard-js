@@ -2,6 +2,7 @@
 @import "mixins.styl"
 @import "header.styl"
 @import "chart.styl"
+@import "table-tools.styl"
 
 //default styles start
 *
@@ -103,7 +104,7 @@ textarea:focus:-moz-placeholder
       color $blue
       border-color $blue
 
-.button-refresh
+.button-round
   border 2px solid $gray
   border-radius 50%
   padding 9px
@@ -111,7 +112,23 @@ textarea:focus:-moz-placeholder
   background transparent
   text-align center
   text-transform uppercase
-  color $white
+  &.dark
+    color $white
+  &.white
+    color $grafit-gray
   &:hover
     color $blue
     border-color $blue
+
+.input
+  border 2px solid $gray
+  border-radius 25px
+  padding 10px 25px
+  background transparent
+  text-align left
+  text-transform uppercase
+  &:focus
+    border-color $blue
+
+  .search
+    color $grafit-gray

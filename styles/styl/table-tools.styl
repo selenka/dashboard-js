@@ -1,0 +1,54 @@
+.table
+    &__header,
+    &__tools
+      align-self center
+    &__header
+        background $white
+        display flex
+        justify-content space-between
+        flex-wrap wrap
+        padding 50px
+    &__tab-list
+        padding-top 10px
+    &__tab
+        display inline-block
+        &:hover a,
+        &:focus a,
+        &:active a,
+        .active
+            color $blue
+
+        a
+            color $gray
+            font-size 16px
+            margin 0 10px
+.input-box
+    position relative
+    .icon-search
+        position absolute
+        top 4px
+        left 8px
+        color $gray
+
+@media only screen and (max-width 768px)
+    .table
+        &__tab-list
+            margin 15px auto
+
+        &__tools
+            width 100%
+
+        &__tools .input-box
+            display inline-block
+            margin 10px 0
+    .input-box
+        .icon-search
+           top 10px
+
+@media only screen and (max-width 500px)
+    .table
+        &__tab-list
+            margin 15px 0
+        &__tab
+            width 100%
+            margin 5px 0
